@@ -1,0 +1,120 @@
+"use client";
+
+import { useReducedMotion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
+
+type FooterBackdropProps = {
+  reducedMotion?: boolean;
+};
+
+export function FooterBackdrop({ reducedMotion = false }: FooterBackdropProps) {
+  const prefersReducedMotion = useReducedMotion();
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) {
+      return;
+    }
+
+    const shouldReduce = reducedMotion || prefersReducedMotion;
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      alpha: true,
+      antialias: true,
+      powerPreference: "low-power",
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x000000, 0);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 50);
+    camera.position.z = 6;
+
+    const lineCount = 48;
+    const linePositions = new Float32Array(lineCount * 2 * 3);
+    const linePhases = new Float32Array(lineCount);
+    const lineSpeeds = new Float32Array(lineCount);
+
+    for (let i = 0; i < lineCount; i += 1) {
+      const x = (Math.random() - 0.5) * 8.4;
+      const z = (Math.random() - 0.5) * 2;
+      const yBottom = -2.4;
+      const yTop = 2.4;
+      const baseIndex = i * 6;
+      linePositions[baseIndex] = x;
+      linePositions[baseIndex + 1] = yBottom;
+      linePositions[baseIndex + 2] = z;
+      linePositions[baseIndex + 3] = x;
+      linePositions[baseIndex + 4] = yTop;
+      linePositions[baseIndex + 5] = z;
+      linePhases[i] = Math.random() * Math.PI * 2;
+      lineSpeeds[i] = 0.55 + Math.random() * 0.45;
+    }
+
+    const linesGeometry = new THREE.BufferGeometry();
+    linesGeometry.setAttribute("position", new THREE.BufferAttribute(linePositions, 3));
+    const linesMaterial = new THREE.LineBasicMaterial({
+      color: new THREE.Color(0xc1a058),
+      transparent: true,
+      opacity: 0.3,
+    });
+    const lineSegments = new THREE.LineSegments(linesGeometry, linesMaterial);
+    lineSegments.position.z = 0.35;
+    scene.add(lineSegments);
+
+    const ambient = new THREE.AmbientLight(0xc1a058, 0.16);
+    scene.add(ambient);
+
+    const resize = () => {
+      const { width, height } = canvas.getBoundingClientRect();
+      if (width === 0 || height === 0) {
+        return;
+      }
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    };
+
+    resize();
+    let frameId = 0;
+    const start = performance.now();
+
+    const render = (time: number) => {
+      if (!shouldReduce) {
+        const t = (time - start) * 0.00035;
+        const positions = linesGeometry.getAttribute("position") as THREE.BufferAttribute;
+        const range = 6.2;
+        for (let i = 0; i < lineCount; i += 1) {
+          const drift = ((t * lineSpeeds[i] + linePhases[i]) % range) - range / 2;
+          const baseIndex = i * 6;
+          positions.array[baseIndex + 1] = -2.4 - drift;
+          positions.array[baseIndex + 4] = 2.4 - drift;
+        }
+        positions.needsUpdate = true;
+      }
+      renderer.render(scene, camera);
+      if (!shouldReduce) {
+        frameId = requestAnimationFrame(render);
+      }
+    };
+
+    renderer.render(scene, camera);
+    if (!shouldReduce) {
+      frameId = requestAnimationFrame(render);
+    }
+
+    window.addEventListener("resize", resize);
+
+    return () => {
+      window.removeEventListener("resize", resize);
+      cancelAnimationFrame(frameId);
+      linesGeometry.dispose();
+      linesMaterial.dispose();
+      renderer.dispose();
+    };
+  }, [prefersReducedMotion, reducedMotion]);
+
+  return <canvas ref={canvasRef} className="footer-canvas" aria-hidden="true" />;
+}
