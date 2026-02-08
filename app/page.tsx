@@ -62,6 +62,12 @@ export default function HomePage() {
 
       <Section id="seven" title="The Power of Seven">
         <PillarsTeaser />
+        <div className="mt-10 rounded-2xl border border-stone/35 bg-[rgba(12,11,9,0.6)] p-6 sm:p-7">
+          <p className="text-xs uppercase tracking-[0.18em] text-[rgba(193,160,88,0.8)]">Genesis 2:2–3 (ESV)</p>
+          <p className="mt-4 text-base leading-8 text-muted italic">
+            “And on the seventh day God finished His work that He had done, and He rested on the seventh day from all his work that He had done. So God blessed the seventh day and made it holy, because on it God rested from all his work that He had done in creation.”
+          </p>
+        </div>
       </Section>
 
       <Divider />
