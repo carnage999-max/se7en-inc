@@ -90,6 +90,10 @@ export function Footer() {
         <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-stone/20 pt-6 text-[10px] tracking-[0.2em] sm:flex-row">
           <p>© <CurrentYear /> SE7EN INC. All rights reserved.</p>
         </div>
+        <div className="mt-5 text-center text-xs uppercase tracking-[0.18em] text-[rgba(236,230,220,0.82)]">
+          Founded May 7, 2026 By Nathan Reardon, who was 47 years old and Donald Trump was the 47th president of the
+          United States.
+        </div>
       </div>
     </footer>
   );

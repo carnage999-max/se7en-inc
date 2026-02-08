@@ -102,6 +102,38 @@ export default function HomePage() {
 
       <Section id="philosophy" title="Philosophy">
         <div>
+          <h3 className="font-display text-2xl text-marble">Founding Principles</h3>
+          <p className="mt-2">SE7EN INC. was founded on three basic principles.</p>
+          <div className="mt-4 space-y-4">
+            <div>
+              <span className="inline-flex items-center rounded-sm bg-gradient-to-r from-[rgba(141,106,47,0.9)] via-[rgba(193,160,88,0.9)] to-[rgba(224,192,122,0.9)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#14110f]">
+                <em className="font-display font-bold not-italic">Discover</em>
+              </span>
+              <p className="mt-3">
+                We search for problems and find innovative ways to fix them.
+              </p>
+            </div>
+            <div>
+              <span className="inline-flex items-center rounded-sm bg-gradient-to-r from-[rgba(141,106,47,0.9)] via-[rgba(193,160,88,0.9)] to-[rgba(224,192,122,0.9)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#14110f]">
+                <em className="font-display font-bold not-italic">Disrupt</em>
+              </span>
+              <p className="mt-3">
+                We don’t follow the old ways of conducting business. We question everything. Our goal is to completely
+                disrupt entire platforms.
+              </p>
+            </div>
+            <div>
+              <span className="inline-flex items-center rounded-sm bg-gradient-to-r from-[rgba(141,106,47,0.9)] via-[rgba(193,160,88,0.9)] to-[rgba(224,192,122,0.9)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#14110f]">
+                <em className="font-display font-bold not-italic">Dominate</em>
+              </span>
+              <p className="mt-3">
+                We believe in the philosophy of the legendary Jack Welch. Be #1 or #2 or get out. We are not interested
+                in incremental improvement. If we enter a space, we intend to own it.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
           <h3 className="font-display text-2xl text-marble">Order Over Chaos</h3>
           <p className="mt-2">Sustainable impact requires structure. Improvisation without governance decays.</p>
         </div>
