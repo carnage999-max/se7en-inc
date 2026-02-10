@@ -14,6 +14,12 @@ export default function HomePage() {
       <Divider />
 
       <Section id="about" title="About SE7EN">
+        <div className="rounded-2xl border border-stone/35 bg-[rgba(12,11,9,0.6)] p-6 sm:p-7">
+          <p className="text-xs uppercase tracking-[0.18em] text-[rgba(193,160,88,0.8)]">Mission Statement</p>
+          <p className="mt-4 text-base leading-8 text-marble sm:text-lg">
+            “SE7EN exists to bring order to complexity by building complete, defensible systems that endure.”
+          </p>
+        </div>
         <div>
           <h3 className="font-display text-2xl text-marble">What SE7EN Is</h3>
           <p className="mt-2">
