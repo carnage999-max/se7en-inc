@@ -42,6 +42,12 @@ export function Hero() {
         <p className="mt-3 text-xs uppercase tracking-[0.22em] text-[rgba(236,230,220,0.68)]">
           This is not a product. This is an institution.
         </p>
+        <div className="mt-8 w-full max-w-3xl rounded-2xl border border-stone/30 bg-[rgba(12,11,9,0.55)] px-6 py-5">
+          <p className="text-base italic leading-7 text-[rgba(236,230,220,0.82)]">
+            “I will give you back seven times what you lost.”
+          </p>
+          <p className="mt-3 text-xs uppercase tracking-[0.2em] text-[rgba(193,160,88,0.8)]">Joel 2:25</p>
+        </div>
       </div>
     </section>
   );
