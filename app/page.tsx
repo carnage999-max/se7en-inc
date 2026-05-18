@@ -101,6 +101,19 @@ export default function HomePage() {
             SE7EN INC. prioritizes core primitives, interfaces, and enforceable claims. Noise filings and speculative
             disclosures are avoided.
           </p>
+          <p className="mt-4">
+            <a 
+              href="/patents.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded border border-[rgba(193,160,88,0.5)] text-[rgba(193,160,88,0.9)] hover:text-[rgba(224,192,122,1)] hover:border-[rgba(224,192,122,0.8)] transition-colors group"
+            >
+              <span className="text-sm uppercase tracking-[0.1em] font-semibold">View Patent Filing</span>
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </p>
         </div>
         <div>
           <h3 className="font-display text-2xl text-marble">Long-Cycle Execution</h3>
