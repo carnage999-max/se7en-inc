@@ -86,13 +86,13 @@ export default function HomePage() {
             Control precedes scale.
           </p>
         </div>
-        <div className="stone-card overflow-hidden rounded-2xl">
+        <div className="stone-card mx-auto max-w-3xl overflow-hidden rounded-2xl">
           <Image
             src="/images/se7en-gold-building.png"
             alt="SE7EN INC. gold building"
             width={1200}
             height={800}
-            className="h-auto w-full object-cover"
+            className="h-auto w-full object-cover object-center"
           />
         </div>
         <div>
