@@ -35,13 +35,22 @@ export function Hero() {
         <p className="mt-8 text-xs uppercase tracking-[0.22em] text-[rgba(193,160,88,0.9)] sm:text-sm">
           Holding Corporation for World-Changing Ideas
         </p>
-        <p className="mt-6 max-w-3xl text-sm uppercase tracking-[0.2em] text-[rgba(236,230,220,0.78)] sm:text-base">
-          SE7EN INC. exists to establish order, permanence, and authority over ideas that demand time, structure, and
-          disciplined execution.
-        </p>
-        <p className="mt-3 text-xs uppercase tracking-[0.22em] text-[rgba(236,230,220,0.68)]">
-          This is not a product. This is an institution.
-        </p>
+        <div className="mt-6 max-w-4xl space-y-4 text-center">
+          <p className="text-base leading-8 text-[rgba(236,230,220,0.9)] sm:text-lg">
+            SE7EN exists because we believe we are called to be God&apos;s hands and feet on Earth.
+          </p>
+          <p className="text-sm uppercase tracking-[0.16em] text-[rgba(236,230,220,0.76)] sm:text-base">
+            We were not placed here merely to observe problems, but to solve them.
+          </p>
+          <p className="mx-auto max-w-3xl text-sm leading-8 text-[rgba(236,230,220,0.74)] sm:text-base">
+            Through innovation, stewardship, and disciplined execution, we pursue solutions to some of the world&apos;s
+            most significant challenges, improving lives, strengthening communities, and creating a better future for
+            generations to come.
+          </p>
+          <p className="text-xs uppercase tracking-[0.3em] text-[rgba(193,160,88,0.92)] sm:text-sm">
+            We Can Do Better
+          </p>
+        </div>
         <div className="mt-8 w-full max-w-3xl rounded-2xl border border-stone/30 bg-[rgba(12,11,9,0.55)] px-6 py-5">
           <p className="text-base italic leading-7 text-[rgba(236,230,220,0.82)]">
             “I will give you back seven times what you lost.”

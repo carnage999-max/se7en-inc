@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | SE7EN INC.",
   },
   description:
-    "SE7EN INC. exists to establish order, permanence, and authority over ideas that demand time, structure, and disciplined execution. Holding Corporation for World-Changing Ideas.",
+    "SE7EN exists because we believe we are called to be God's hands and feet on Earth, solving real problems through innovation, stewardship, and disciplined execution.",
   applicationName: "SE7EN INC.",
   keywords: [
     "SE7EN INC.",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SE7EN INC.",
     description:
-      "SE7EN INC. is a holding corporation and governance framework designed to incubate, protect, and mature high-impact ideas across long time horizons.",
+      "SE7EN exists because we believe we are called to be God's hands and feet on Earth, solving real problems through innovation, stewardship, and disciplined execution.",
     type: "website",
     siteName: "SE7EN INC.",
     url: "https://se7eninc.com",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SE7EN INC.",
     description:
-      "SE7EN INC. exists to establish order, permanence, and authority over ideas that demand time, structure, and disciplined execution.",
+      "SE7EN exists because we believe we are called to be God's hands and feet on Earth, solving real problems through innovation, stewardship, and disciplined execution.",
     images: ["/og.png"],
   },
   themeColor: "#0f0d0b",
@@ -81,7 +81,7 @@ export default function RootLayout({
     url: "https://se7eninc.com",
     logo: "https://se7eninc.com/logo/se7eninc.png",
     description:
-      "SE7EN INC. exists to establish order, permanence, and authority over ideas that demand time, structure, and disciplined execution.",
+      "SE7EN exists because we believe we are called to be God's hands and feet on Earth, solving real problems through innovation, stewardship, and disciplined execution.",
   };
 
   return (

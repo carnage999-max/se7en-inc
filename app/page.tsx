@@ -4,8 +4,300 @@ import Image from "next/image";
 
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
+import { PatentAccordion } from "@/components/PatentAccordion";
 import { PillarsTeaser } from "@/components/PillarsTeaser";
 import { Section } from "@/components/Section";
+
+const patentCategories = [
+  {
+    title: "App / Tech",
+    items: [
+      "Heal Link",
+      "Liberty Social",
+      "Work History Registry",
+      "Apex Hunter",
+      "Reardon AI",
+      "Scene Aware",
+      "EZ Post",
+      "Right Jobs",
+      "Company Reels",
+      "Liberty Vibe",
+      "Liberty Live",
+      "Liberty Verify",
+      "Reply IQ",
+      "No Limit Flix",
+      "Knowledge Vault",
+      "Vendor Vault",
+    ],
+  },
+  {
+    title: "Auto",
+    items: [
+      "Guardian Co",
+      "InstaHeat",
+      "Choice Parts",
+      "Clear Shift Covers",
+      "Clear View Mirror",
+      "The Daisy System",
+      "Deca+",
+      "No Dry Starts",
+      "Fuel Maxx",
+      "Gentle Vent",
+      "Membership Auto",
+      "Slip Safe",
+      "Soft Alert",
+      "Sun Armor Tires",
+      "Hydro Spool Turbo",
+      "X-Intake",
+      "Invisishield Glass+",
+      "Seal Guard",
+      "ThermaLock",
+      "Thermal Access Port",
+      "360 Weld",
+      "AeroStop",
+      "Automind Scanner",
+      "Breakshot",
+      "Pull Core",
+      "M1 Razor",
+      "LABS",
+      "Wash IQ",
+      "Life Barrier",
+      "Tire Master",
+      "Auto Clerk",
+      "FutureTech",
+      "Service Writer HUB",
+      "Path Alert",
+      "Phantom Key",
+      "Rust Blok",
+    ],
+  },
+  {
+    title: "Energy",
+    items: ["Quantus-cap", "Core Volt", "Magma-Bit", "Pyra Pipe", "Quantus", "Thermal Dominion", "Perp-Power"],
+  },
+  {
+    title: "Environment",
+    items: ["Smognet", "TerraGuard", "Aurum Micro Plastics", "Aurum Mercury", "Hydrocleanse", "Aurum Flux", "Marine Guardian", "Shorelock", "Freedom Bag"],
+  },
+  {
+    title: "Financial",
+    items: ["Evergreen Fund", "AtlasBooks"],
+  },
+  {
+    title: "Legal",
+    items: ["Legal Connect", "Legal Tracker", "Benchmark Justice", "Mail Proofs", "SignaCore"],
+  },
+  {
+    title: "Medical / Health",
+    items: [
+      "Aiir",
+      "AntiVen Pen",
+      "Autophashield",
+      "Bio Clock Kernel",
+      "Calm Throat",
+      "Cancer Collapse",
+      "Core Barrier",
+      "Cradle Guardian",
+      "Cryo Fresh Pod",
+      "Derma Seal",
+      "Dormigen",
+      "Genesis Chamber",
+      "Immunova Vaccine",
+      "Intense Maxx",
+      "Kidney Glide",
+      "Kirk Collar",
+      "Lacto Clear",
+      "LASE",
+      "Genesis One Olfactory",
+      "Lecti Cure",
+      "Nervana",
+      "Neuro Restore",
+      "Neuro Shield",
+      "Oxalate Guard",
+      "Poly Purge",
+      "Strip Check",
+      "Radiamel",
+      "Recall Max",
+      "Solin",
+      "Stage Steady",
+      "Reardon Protocol C",
+      "Reardon Protocol D",
+      "Ticked Off",
+      "Truth Drop",
+      "Vita Choice",
+      "Zero Derm",
+      "Neurovasc",
+      "Apogenix",
+      "Daily Dose",
+      "Mercury Zero",
+      "Panic Brake",
+      "Thermostat",
+      "Cycle Stable",
+      "Hormone Shield",
+      "Hydra Sense",
+      "Keto Sense",
+      "Atlas (AB)",
+      "Cravex",
+      "Yeast Guard",
+      "ALZ Clear",
+      "CFShield",
+      "Attenex",
+      "Snap Protein",
+      "Acidown",
+      "Sentra",
+      "Stabilis",
+      "Dawn Block",
+      "Cravex Necklace",
+      "Hemosense",
+      "Urgenta",
+      "Kid Calm",
+      "Endo Core",
+      "Sting Stop",
+      "Gout Guard",
+      "Gout Sense",
+      "Metabolic Sense",
+    ],
+  },
+  {
+    title: "News",
+    items: ["Maine Pulse", "Maine News Now"],
+  },
+  {
+    title: "Pets",
+    items: ["Pet Savers", "Poo Gone"],
+  },
+  {
+    title: "Police / Fire",
+    items: [
+      "Custody Pulse",
+      "Apex Veil",
+      "Cop Stop",
+      "Blue Voice",
+      "Shock Stop",
+      "Custody Care",
+      "Daisy Door Opener",
+      "Safe T Plastic",
+      "Tear Safe Sheets",
+      "Wall Guard-Light",
+      "Justice Pay",
+      "Zero Freeze Hose",
+      "Reveal Core",
+      "Needle Shield",
+      "Strike Dry",
+      "Chain Vault",
+      "Vault Port",
+      "FreedomTek",
+      "Pulse Stop",
+      "Break Guard",
+      "Flood Hose",
+      "Intake Flow",
+      "Justice Pay-Locate",
+      "ResponderSense",
+      "Watchtower",
+      "Command Room",
+      "Pin Core",
+      "Call Firewall",
+      "Command Core",
+      "Voice Pass",
+      "Quiet Case",
+      "Sector Safe",
+      "Sword Lock",
+      "Hydra Wall",
+    ],
+  },
+  {
+    title: "Real Estate",
+    items: [
+      "Duck Guard Coatings",
+      "Silent Guard Paint",
+      "Stable Buddy",
+      "R-Board",
+      "Ice Shield Roof",
+      "Lumatherm",
+      "FrostMat",
+      "PaneShield",
+      "Onespace Residential",
+      "Onespace Commercial",
+      "Onespace Industrial",
+      "Onespace Land",
+      "Antifreeze Flow",
+      "R-tape",
+      "Wild Shield",
+    ],
+  },
+  {
+    title: "Retail",
+    items: [
+      "Leak Hawk",
+      "Leaf Mate",
+      "Mega Grow",
+      "Never Stuck Trax",
+      "No Sweat",
+      "PatchWorx Pavement",
+      "Pest Fence",
+      "SaniSpray",
+      "Sleep Cool",
+      "Snap Carry",
+      "Surge Internal",
+      "Wring Max",
+      "Infiniti-D",
+      "Anti-Splash",
+      "BedSeal",
+      "Lock Guard",
+      "Cali-BondNails",
+      "Fuel Trigger",
+      "Halo Cut",
+      "Membership Plowing",
+      "Share Pour",
+      "Glare Guard",
+      "Choice Pizza",
+      "Conservative Coffee",
+      "Flex Shield",
+      "Never Stuck Trax Robot Vacuum",
+    ],
+  },
+  {
+    title: "Safety",
+    items: [
+      "BeastBlock",
+      "FireGuardGT",
+      "Identifi",
+      "IntelliShield Plane",
+      "Invisishield Film",
+      "Kid Block",
+      "Never Forget Baby",
+      "Rail Scout",
+      "GuardianAngel AI",
+      "Stability OS",
+      "Scentinel",
+      "Cross Shield Trailer",
+      "Cross Shield Aero",
+    ],
+  },
+  {
+    title: "Security",
+    items: [
+      "APEX Shield",
+      "APEX Alert",
+      "APEX Defender",
+      "APEX Drone",
+      "Blackout Shield",
+      "DRUG GUARD",
+      "Aeroflow",
+      "GateShield",
+      "Drone Defender",
+      "OneKey (Key Vault)",
+    ],
+  },
+  {
+    title: "Weather",
+    items: ["Storm Defender", "Storm Forge", "Sure Drain", "Ice Shield", "Storm Forge-Coastal", "Storm Forge-Municipal", "Storm Forge-Wind", "Storm Forge-Hydracore"],
+  },
+  {
+    title: "Charity",
+    items: ["AlwaysHome", "Meals that Heal", "WWCW"],
+  },
+];
 
 export default function HomePage() {
   return (
@@ -101,19 +393,30 @@ export default function HomePage() {
             SE7EN INC. prioritizes core primitives, interfaces, and enforceable claims. Noise filings and speculative
             disclosures are avoided.
           </p>
-          <p className="mt-4">
-            <a 
-              href="/patents.pdf" 
-              target="_blank" 
+        </div>
+        <div className="stone-card rounded-2xl p-6 sm:p-7">
+          <div className="flex flex-col gap-3 border-b border-stone/25 pb-5 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.18em] text-[rgba(193,160,88,0.8)]">Currently in Development</p>
+              <h3 className="mt-2 font-display text-2xl text-marble">Patent Portfolio Snapshot</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-muted sm:text-base">
+                A categorized view of active concepts across technology, infrastructure, health, safety, environment,
+                and other long-cycle innovation tracks.
+              </p>
+            </div>
+            <a
+              href="/patents.pdf"
+              target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded border border-[rgba(193,160,88,0.5)] text-[rgba(193,160,88,0.9)] hover:text-[rgba(224,192,122,1)] hover:border-[rgba(224,192,122,0.8)] transition-colors group"
+              className="inline-flex items-center gap-2 self-start rounded border border-[rgba(193,160,88,0.5)] px-4 py-2 text-[rgba(193,160,88,0.9)] transition-colors hover:border-[rgba(224,192,122,0.8)] hover:text-[rgba(224,192,122,1)] group"
             >
-              <span className="text-sm uppercase tracking-[0.1em] font-semibold">View Patent Filing</span>
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <span className="text-sm font-semibold uppercase tracking-[0.1em]">Download List of Patents</span>
+              <svg className="h-4 w-4 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v12m0 0 4-4m-4 4-4-4m-5 8h18" />
               </svg>
             </a>
-          </p>
+          </div>
+          <PatentAccordion categories={patentCategories} />
         </div>
         <div>
           <h3 className="font-display text-2xl text-marble">Long-Cycle Execution</h3>
