@@ -303,6 +303,19 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <section className="px-6 py-14 sm:px-8 sm:py-16 lg:px-10">
+        <div className="mx-auto w-full max-w-5xl">
+          <div className="stone-card rounded-[2rem] p-6 sm:p-8">
+            <div className="inline-flex max-w-full items-center rounded-full border border-[rgba(224,192,122,0.65)] bg-gradient-to-r from-[rgba(141,106,47,0.96)] via-[rgba(193,160,88,0.96)] to-[rgba(224,192,122,0.96)] px-5 py-3 shadow-[0_12px_28px_rgba(0,0,0,0.3)]">
+              <p className="font-display text-xl text-[#14110f] sm:text-2xl">Meals that heal.</p>
+            </div>
+            <p className="mt-6 max-w-4xl text-base leading-8 text-marble sm:text-lg">
+              We are not a charity that is run like an organization. We are a charity that is run like a high
+              performing business. This is what makes us different. Everything we do is measurable and actionable.
+            </p>
+          </div>
+        </div>
+      </section>
       <Divider />
 
       <Section id="about" title="About SE7EN">
@@ -395,7 +408,7 @@ export default function HomePage() {
           </p>
         </div>
         <div className="stone-card rounded-2xl p-6 sm:p-7">
-          <div className="flex flex-col gap-3 border-b border-stone/25 pb-5 sm:flex-row sm:items-end sm:justify-between">
+          <div className="border-b border-stone/25 pb-5">
             <div>
               <p className="text-xs uppercase tracking-[0.18em] text-[rgba(193,160,88,0.8)]">Currently in Development</p>
               <h3 className="mt-2 font-display text-2xl text-marble">Patent Portfolio Snapshot</h3>
@@ -404,17 +417,6 @@ export default function HomePage() {
                 and other long-cycle innovation tracks.
               </p>
             </div>
-            <a
-              href="/patents.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 self-start rounded border border-[rgba(193,160,88,0.5)] px-4 py-2 text-[rgba(193,160,88,0.9)] transition-colors hover:border-[rgba(224,192,122,0.8)] hover:text-[rgba(224,192,122,1)] group"
-            >
-              <span className="text-sm font-semibold uppercase tracking-[0.1em]">Download List of Patents</span>
-              <svg className="h-4 w-4 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v12m0 0 4-4m-4 4-4-4m-5 8h18" />
-              </svg>
-            </a>
           </div>
           <PatentAccordion categories={patentCategories} />
         </div>
