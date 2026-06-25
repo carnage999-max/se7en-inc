@@ -7,6 +7,7 @@ import Script from "next/dist/client/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://se7eninc.com"),
+  manifest: "/manifest.webmanifest",
   title: {
     default: "SE7EN INC.",
     template: "%s | SE7EN INC.",
@@ -67,6 +68,14 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   themeColor: "#0f0d0b",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
+  },
 };
 
 export default function RootLayout({

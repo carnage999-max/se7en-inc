@@ -7,8 +7,6 @@ type ContactPayload = {
   message: string;
 };
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
     const payload = (await request.json()) as ContactPayload;
@@ -23,6 +21,8 @@ export async function POST(request: Request) {
     if (!process.env.RESEND_API_KEY || toList.length === 0) {
       return NextResponse.json({ error: "Email configuration missing" }, { status: 500 });
     }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const subject = "SE7EN INC. Contact";
     const text = `Name: ${payload.name}\nEmail: ${payload.email}\n\n${payload.message}`;
