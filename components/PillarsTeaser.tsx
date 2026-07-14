@@ -10,9 +10,9 @@ export function PillarsTeaser() {
         </article>
       ))}
       <article className="rounded-2xl border border-[rgba(193,160,88,0.38)] bg-[rgba(193,160,88,0.08)] p-6 sm:p-7">
-        <h3 className="font-display text-xl text-marble">Why SE7EN INC. Uses This Framework</h3>
+        <h3 className="font-display text-xl text-marble">Why SE7EN EQUITY HOLDINGS INC. Uses This Framework</h3>
         <p className="mt-3 text-base leading-8 text-muted">
-          SE7EN INC. adopts the framework of seven as an institutional doctrine: order over chaos, systems over
+          SE7EN EQUITY HOLDINGS INC. adopts the framework of seven as an institutional doctrine: order over chaos, systems over
           products, completion over endless iteration.
         </p>
       </article>

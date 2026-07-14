@@ -38,13 +38,13 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-stone/20 bg-obsidian/80 backdrop-blur-md">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-10">
-        <a href="#home" className="group flex items-center gap-3" aria-label="SE7EN INC. home">
+        <a href="#home" className="group flex items-center gap-3" aria-label="SE7EN EQUITY HOLDINGS INC. home">
           <div className="relative h-10 w-10 overflow-hidden rounded-full border border-stone/40">
-            <Image src="/logo/se7eninc.png" alt="SE7EN INC." fill sizes="40px" className="object-cover" />
+            <Image src="/logo/se7eninc.png" alt="SE7EN EQUITY HOLDINGS INC." fill sizes="40px" className="object-cover" />
           </div>
           <div>
             <p className="font-display text-sm tracking-[0.2em] text-marble sm:text-base sm:tracking-[0.22em]">
-              SE7EN INC.
+              SE7EN EQUITY HOLDINGS INC.
             </p>
           </div>
         </a>

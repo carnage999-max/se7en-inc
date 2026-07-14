@@ -23,10 +23,10 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
-        <h1 className="sr-only">SE7EN INC.</h1>
+        <h1 className="sr-only">SE7EN EQUITY HOLDINGS INC.</h1>
         <Image
           src="/logo/se7eninc.png"
-          alt="SE7EN INC. logo"
+          alt="SE7EN EQUITY HOLDINGS INC. logo"
           width={900}
           height={900}
           priority

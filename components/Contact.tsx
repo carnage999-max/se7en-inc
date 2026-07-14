@@ -45,7 +45,7 @@ export function Contact() {
     <div className="space-y-7">
       <h3 className="font-display text-2xl text-marble">Corporate Engagement Only</h3>
       <p>
-        SE7EN INC. engages through institutional channels: venture governance, intellectual property frameworks, and
+        SE7EN EQUITY HOLDINGS INC. engages through institutional channels: venture governance, intellectual property frameworks, and
         long-term strategic alignment.
       </p>
       <p>Public inquiries, speculative proposals, and unsolicited pitches are not considered.</p>
@@ -107,7 +107,7 @@ export function Contact() {
       <div className="rounded-2xl border border-stone/35 bg-[rgba(14,13,11,0.72)] p-6 sm:p-7">
         <p className="text-sm uppercase tracking-[0.14em] text-[rgba(193,160,88,0.9)]">Disclaimer</p>
         <p className="mt-3 text-base leading-8 text-muted">
-          SE7EN INC. materials are provided for informational purposes only. No public claims of partnership,
+          SE7EN EQUITY HOLDINGS INC. materials are provided for informational purposes only. No public claims of partnership,
           endorsement, or guarantees are made on this site.
         </p>
       </div>

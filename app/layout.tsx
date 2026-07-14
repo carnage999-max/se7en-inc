@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://se7eninc.com"),
   manifest: "/manifest.webmanifest",
   title: {
-    default: "SE7EN INC.",
-    template: "%s | SE7EN INC.",
+    default: "SE7EN EQUITY HOLDINGS INC",
+    template: "%s | SE7EN EQUITY HOLDINGS INC",
   },
   description:
     "SE7EN exists because we believe we are called to be God's hands and feet on Earth, solving real problems through innovation, stewardship, and disciplined execution.",
-  applicationName: "SE7EN INC.",
+  applicationName: "SE7EN EQUITY HOLDINGS INC",
   keywords: [
-    "SE7EN INC.",
+    "SE7EN EQUITY HOLDINGS INC",
     "holding corporation",
     "governance framework",
     "institutional permanence",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "authority",
     "systems",
   ],
-  authors: [{ name: "SE7EN INC." }],
-  creator: "SE7EN INC.",
-  publisher: "SE7EN INC.",
+  authors: [{ name: "SE7EN EQUITY HOLDINGS INC" }],
+  creator: "SE7EN EQUITY HOLDINGS INC",
+  publisher: "SE7EN EQUITY HOLDINGS INC.",
   formatDetection: {
     email: false,
     address: false,
@@ -45,24 +45,24 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "SE7EN INC.",
+    title: "SE7EN EQUITY HOLDINGS INC.",
     description:
       "SE7EN exists because we believe we are called to be God's hands and feet on Earth, solving real problems through innovation, stewardship, and disciplined execution.",
     type: "website",
-    siteName: "SE7EN INC.",
+    siteName: "SE7EN EQUITY HOLDINGS INC.",
     url: "https://se7eninc.com",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "SE7EN INC.",
+        alt: "SE7EN EQUITY HOLDINGS INC.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SE7EN INC.",
+    title: "SE7EN EQUITY HOLDINGS INC.",
     description:
       "SE7EN exists because we believe we are called to be God's hands and feet on Earth, solving real problems through innovation, stewardship, and disciplined execution.",
     images: ["/og.png"],
@@ -86,7 +86,7 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "SE7EN INC.",
+    name: "SE7EN EQUITY HOLDINGS INC.",
     url: "https://se7eninc.com",
     logo: "https://se7eninc.com/logo/se7eninc.png",
     description:

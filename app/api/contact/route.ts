@@ -24,14 +24,14 @@ export async function POST(request: Request) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const subject = "SE7EN INC. Contact";
+    const subject = "SE7EN EQUITY HOLDINGS INC. Contact";
     const text = `Name: ${payload.name}\nEmail: ${payload.email}\n\n${payload.message}`;
     const html = `
       <div style="background:#0f0d0b;padding:36px;font-family:Inter,Arial,sans-serif;color:#ece6dc;">
         <div style="max-width:680px;margin:0 auto;border:1px solid rgba(193,160,88,0.35);background:#14110f;">
           <div style="padding:26px 28px;background:linear-gradient(165deg,#0f0d0b,#14110f 55%,#0f0d0b);">
             <div style="font-family:Cinzel,Times New Roman,serif;letter-spacing:0.28em;font-size:11px;color:#c1a058;text-transform:uppercase;">
-              SE7EN INC.
+              SE7EN EQUITY HOLDINGS INC.
             </div>
             <div style="margin-top:6px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#b8b0a4;">
               Holding Corporation for World-Changing Ideas
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
               Corporate Engagement Inquiry
             </h1>
             <p style="margin:0 0 18px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#b8b0a4;">
-              SE7EN INC. Contact
+              SE7EN EQUITY HOLDINGS INC. Contact
             </p>
             <div style="border:1px solid rgba(79,74,68,0.6);padding:18px;background:rgba(15,13,11,0.75);">
               <p style="margin:0 0 8px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#c1a058;">Name</p>
@@ -63,7 +63,7 @@ export async function POST(request: Request) {
     `;
 
     await resend.emails.send({
-      from: "SE7EN INC. <noreply@se7eninc.com>",
+      from: "SE7EN EQUITY HOLDINGS INC. <noreply@se7eninc.com>",
       to: toList,
       subject,
       text,

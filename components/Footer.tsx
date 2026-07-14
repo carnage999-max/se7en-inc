@@ -63,10 +63,10 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
           <div className="flex items-center gap-3">
             <div className="relative h-10 w-10 overflow-hidden rounded-full border border-stone/40">
-              <Image src="/logo/se7eninc.png" alt="SE7EN INC." fill sizes="40px" className="object-cover" />
+              <Image src="/logo/se7eninc.png" alt="SE7EN EQUITY HOLDINGS INC." fill sizes="40px" className="object-cover" />
             </div>
             <div>
-              <p className="font-display text-xs tracking-[0.24em] text-marble">SE7EN INC.</p>
+              <p className="font-display text-xs tracking-[0.24em] text-marble">SE7EN EQUITY HOLDINGS INC.</p>
               <p className="text-[10px] tracking-[0.2em] text-[rgba(236,230,220,0.6)]">
                 Holding Corporation for World-Changing Ideas
               </p>
@@ -88,7 +88,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-stone/20 pt-6 text-[10px] tracking-[0.2em] sm:flex-row">
-          <p>© <CurrentYear /> SE7EN INC. All rights reserved.</p>
+          <p>© <CurrentYear /> SE7EN EQUITY HOLDINGS INC. All rights reserved.</p>
         </div>
         <div className="mt-5 text-center text-xs uppercase tracking-[0.18em] text-[rgba(236,230,220,0.82)]">
           Founded May 7, 2026 By Nathan Reardon, who was 47 years old and Donald Trump was the 47th president of the

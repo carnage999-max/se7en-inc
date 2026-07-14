@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "SE7EN INC.",
-    short_name: "SE7EN INC.",
+    name: "SE7EN EQUITY HOLDINGS INC.",
+    short_name: "SE7EN EQUITY HOLDINGS INC.",
     description:
       "SE7EN exists because we believe we are called to be God",
     start_url: "/",

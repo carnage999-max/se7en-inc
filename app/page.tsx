@@ -328,7 +328,7 @@ export default function HomePage() {
         <div>
           <h3 className="font-display text-2xl text-marble">What SE7EN Is</h3>
           <p className="mt-2">
-            SE7EN INC. is a holding corporation and governance framework designed to incubate, protect, and mature
+            SE7EN EQUITY HOLDINGS INC. is a holding corporation and governance framework designed to incubate, protect, and mature
             high-impact ideas across long time horizons.
           </p>
           <p className="mt-4">
@@ -339,7 +339,7 @@ export default function HomePage() {
         <div className="stone-card overflow-hidden rounded-2xl">
           <Image
             src="/images/se7en-logo-on-sky-scraper.png"
-            alt="SE7EN INC. logo on a sky scraper"
+            alt="SE7EN EQUITY HOLDINGS INC. logo on a sky scraper"
             width={1200}
             height={800}
             className="h-auto w-full object-cover"
@@ -348,7 +348,7 @@ export default function HomePage() {
         <div>
           <h3 className="font-display text-2xl text-marble">What SE7EN Is Not</h3>
           <p className="mt-2">
-            SE7EN INC. is not a startup studio, not a marketing vehicle, and not a rapid-iteration factory. It does not
+            SE7EN EQUITY HOLDINGS INC. is not a startup studio, not a marketing vehicle, and not a rapid-iteration factory. It does not
             chase attention, virality, or speculative hype.
           </p>
         </div>
@@ -358,7 +358,7 @@ export default function HomePage() {
             A holding structure enables continuity. It allows ideas to be governed, capitalized, and executed without
             forcing premature exposure or dilution.
           </p>
-          <p className="mt-4">SE7EN INC. prioritizes durability over speed and structure over noise.</p>
+          <p className="mt-4">SE7EN EQUITY HOLDINGS INC. prioritizes durability over speed and structure over noise.</p>
         </div>
         <div>
           <h3 className="font-display text-2xl text-marble">Long-Term Vision</h3>
@@ -394,7 +394,7 @@ export default function HomePage() {
         <div className="stone-card mx-auto max-w-3xl overflow-hidden rounded-2xl">
           <Image
             src="/images/se7en-gold-building.png"
-            alt="SE7EN INC. gold building"
+            alt="SE7EN EQUITY HOLDINGS INC. gold building"
             width={1200}
             height={800}
             className="h-auto w-full object-cover object-center"
@@ -403,7 +403,7 @@ export default function HomePage() {
         <div>
           <h3 className="font-display text-2xl text-marble">Defensive Patent Strategy</h3>
           <p className="mt-2">
-            SE7EN INC. prioritizes core primitives, interfaces, and enforceable claims. Noise filings and speculative
+            SE7EN EQUITY HOLDINGS INC. prioritizes core primitives, interfaces, and enforceable claims. Noise filings and speculative
             disclosures are avoided.
           </p>
         </div>
@@ -433,7 +433,7 @@ export default function HomePage() {
       <Section id="philosophy" title="Philosophy">
         <div>
           <h3 className="font-display text-2xl text-marble">Founding Principles</h3>
-          <p className="mt-2">SE7EN INC. was founded on three basic principles.</p>
+          <p className="mt-2">SE7EN EQUITY HOLDINGS INC. was founded on three basic principles.</p>
           <div className="mt-4 space-y-4">
             <div>
               <span className="inline-flex items-center rounded-sm bg-gradient-to-r from-[rgba(141,106,47,0.9)] via-[rgba(193,160,88,0.9)] to-[rgba(224,192,122,0.9)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#14110f]">
