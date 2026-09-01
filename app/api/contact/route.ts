@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { getClientIpFromHeaders, verifyTurnstileToken } from "@/lib/turnstile";
 
 type ContactPayload = {
   name: string;
   email: string;
   message: string;
+  turnstileToken?: string;
 };
 
 export async function POST(request: Request) {
@@ -13,6 +15,19 @@ export async function POST(request: Request) {
 
     if (!payload?.name || !payload?.email || !payload?.message) {
       return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
+    }
+
+    const turnstileVerification = await verifyTurnstileToken({
+      token: typeof payload.turnstileToken === "string" ? payload.turnstileToken : "",
+      remoteIp: getClientIpFromHeaders(request.headers),
+      expectedAction: "contact_form",
+    });
+
+    if (!turnstileVerification.ok) {
+      return NextResponse.json(
+        { error: turnstileVerification.error },
+        { status: turnstileVerification.status }
+      );
     }
 
     const toList =
