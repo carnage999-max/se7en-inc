@@ -85,7 +85,13 @@ const patentCategories = [
   },
   {
     title: "Legal",
-    items: ["Legal Connect", "Legal Tracker", "Benchmark Justice", "Mail Proofs", "SignaCore"],
+    items: [
+      "Legal Connect",
+      "Legal Tracker",
+      "Benchmark Justice",
+      "Mail Proofs",
+      { name: "SignaCore", href: "https://mysignacore.com" },
+    ],
   },
   {
     title: "Medical / Health",
