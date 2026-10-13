@@ -5,6 +5,11 @@ import { useState } from "react";
 /**
  * An entry is a name, or a name with somewhere to go. Most of these are patents and research with
  * nothing to link to yet; the few that have shipped as products should reach them.
+ *
+ * Every entry is in the document whether or not its section is open, and a closed section is
+ * hidden rather than unrendered. The difference is not visual - it is that a crawler reads a page
+ * and never clicks one, so a link that only exists after a click does not exist to it at all. The
+ * links out of here are the only thing saying Se7en builds these, and they were reaching nobody.
  */
 type PatentItem = string | { name: string; href: string };
 
@@ -31,6 +36,7 @@ export function PatentAccordion({ categories }: PatentAccordionProps) {
     <div className="mt-6 space-y-3">
       {categories.map((category) => {
         const isOpen = openSections[category.title] ?? false;
+        const sectionId = category.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
         return (
           <div
@@ -42,6 +48,7 @@ export function PatentAccordion({ categories }: PatentAccordionProps) {
               onClick={() => toggleSection(category.title)}
               className="flex w-full items-center gap-4 px-4 py-4 text-left transition-colors hover:bg-[rgba(255,255,255,0.03)] sm:px-5"
               aria-expanded={isOpen}
+              aria-controls={`${sectionId}-items`}
             >
               <div className="min-w-0 flex-1">
                 <h4 className="font-display text-lg text-marble">{category.title}</h4>
@@ -59,8 +66,7 @@ export function PatentAccordion({ categories }: PatentAccordionProps) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m6 9 6 6 6-6" />
               </svg>
             </button>
-            {isOpen ? (
-              <div className="border-t border-stone/20 px-4 py-4 sm:px-5">
+            <div id={`${sectionId}-items`} hidden={!isOpen} className="border-t border-stone/20 px-4 py-4 sm:px-5">
                 <ul className="grid gap-x-8 gap-y-2 text-sm leading-6 text-[rgba(236,230,220,0.82)] sm:grid-cols-2">
                   {category.items.map((item) => {
                     const name = typeof item === "string" ? item : item.name;
@@ -87,8 +93,7 @@ export function PatentAccordion({ categories }: PatentAccordionProps) {
                     );
                   })}
                 </ul>
-              </div>
-            ) : null}
+            </div>
           </div>
         );
       })}
